@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/flickity.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/flickity.min.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/carousel.js" defer></script>
 </head>
 
 <body class="main-body">
@@ -18,8 +24,8 @@
                     <a class="header__logo order-3 order-lg-0" href="./index.html"><img src="./img/Prepodam.svg.png" alt="logo"></a>
                     <button class="header__menu-btn order-4 order-lg-5 d-xl-none">
                         <svg>
-                            <path class="header__menu-btn-cross d-none" width="31px" height="32px" fill="rgb(255, 255, 255)" d="M30.702,28.374 L27.874,31.202 L15.500,18.828 L3.125,31.203 L0.297,28.374 L12.671,16.000 L0.297,3.625 L3.125,0.797 L15.500,13.171 L27.874,0.797 L30.702,3.625 L18.328,15.999 L30.702,28.374 Z"/>
-                            <path class="header__menu-btn-burger d-flex" width="39px" height="26px" fill="rgb(255, 255, 255)" d="M-0.000,26.000 L-0.000,22.000 L39.000,22.000 L39.000,26.000 L-0.000,26.000 ZM-0.000,10.999 L39.000,10.999 L39.000,15.000 L-0.000,15.000 L-0.000,10.999 ZM-0.000,-0.000 L39.000,-0.000 L39.000,3.999 L-0.000,3.999 L-0.000,-0.000 Z"/>
+                            <path class="header__menu-btn-cross d-none" fill="rgb(255, 255, 255)" d="M30.702,28.374 L27.874,31.202 L15.500,18.828 L3.125,31.203 L0.297,28.374 L12.671,16.000 L0.297,3.625 L3.125,0.797 L15.500,13.171 L27.874,0.797 L30.702,3.625 L18.328,15.999 L30.702,28.374 Z" />
+                            <path class="header__menu-btn-burger d-flex" fill="rgb(255, 255, 255)" d="M-0.000,26.000 L-0.000,22.000 L39.000,22.000 L39.000,26.000 L-0.000,26.000 ZM-0.000,10.999 L39.000,10.999 L39.000,15.000 L-0.000,15.000 L-0.000,10.999 ZM-0.000,-0.000 L39.000,-0.000 L39.000,3.999 L-0.000,3.999 L-0.000,-0.000 Z" />
                         </svg>
                     </button>
                     <nav class="header__top-nav d-none order-5 d-lg-flex order-lg-4">
@@ -47,7 +53,7 @@
                     <h2 class="top-content__headline text-center text-lg-left"><b class="akcent">Первая</b> образовательная онлайн-платформа, созданная преподами!</h2>
                     <p class="top-content__deskription text-center text-lg-left">Описание уникального торгового предложения или же описание названия того или иного продукта, который на первом экран</p>
                     <a href="#" class="top-content__reg-link rounded d-flex justify-content-center align-items-center col-lg-3">Зарегистрироваться</a>
-                    <button class="top-content__scroll-btn d-none d-lg-flex">Подробнее ниже</button>
+                    <button class="top-content__scroll-btn d-none d-lg-flex"><span class="d-none d-xl-flex">Подробнее ниже</span></button>
                 </div>
             </div>
         </div>
@@ -55,12 +61,18 @@
     <section class="main-content container-fluid d-flex flex-column justify-content-start align-items-center justify-content-lg-center">
         <div class="row">
             <div class="d-none d-lg-flex col-12 justify-content-center">
-                <a href="#" class="main-content__link d-lg-flex">199 преподавателей уже работает на сайте</a>
+                <a href="#" class="main-content__link d-lg-flex justify-content-center">199 преподавателей уже работает на сайте</a>
             </div>
             <div class="col">
                 <p class="main-content__text d-flex justify-content-center col">Выберите свою программу</p>
+                <div class="category-slider" data-flickity='{"wrapAround": false, "pageDots": false, "prevNextButtons": false, "initialIndex": 1}'>
+                    <a class="category-slider__item category-slider__item--school" href="#"><img class="category-slider__img" src="./img/Layer-4.jpg" alt="текст" width="261" height="450"></a>
+                    <a class="category-slider__item category-slider__item--student" href="#"><img class="category-slider__img" src="./img/Layer-5.jpg" alt="текст" width="261" height="450"></a>
+                    <a class="category-slider__item category-slider__item--additional" href="#"><img class="category-slider__img" src="./img/Layer-2.jpg" alt="текст" width="261" height="450"></a>
+                </div>
             </div>
         </div>
     </section>
 </body>
+
 </html>
